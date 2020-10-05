@@ -18,7 +18,9 @@ class TopBar extends LitElement {
       }
       .hero {
         font-weight: bold;
+        font-size: 1.5em;
         flex: 1;
+        text-shadow: 1px 1px black;
       }
     `
   }
