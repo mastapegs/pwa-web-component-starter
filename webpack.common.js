@@ -9,9 +9,9 @@ module.exports = {
   plugins: [
     // new CleanWebpackPlugin(['dist/*']) for < v2 versions of CleanWebpackPlugin
     new CleanWebpackPlugin(),
-    // new HtmlWebpackPlugin({
-    //   template: './src/index.html',
-    // }),
+    new HtmlWebpackPlugin({
+      template: './src/index.html',
+    }),
   ],
   output: {
     filename: '[name].bundle.js',
