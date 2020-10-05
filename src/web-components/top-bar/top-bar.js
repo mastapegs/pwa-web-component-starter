@@ -7,8 +7,18 @@ class TopBar extends LitElement {
       .container {
         background: #0288D1;
         color: white;
-        height: 3em;
+        height: 4em;
         display: flex;
+        align-items: center;
+        box-shadow: 0 0 .5em .1em black;
+      }
+      .icon {
+        margin: 0 1em;
+        font-size: 2em;
+      }
+      .hero {
+        font-weight: bold;
+        flex: 1;
       }
     `
   }
@@ -16,7 +26,8 @@ class TopBar extends LitElement {
   render() {
     return html`
       <div class='container'>
-        <span></span>
+        <span role='img' aria-label='lightning' class='icon'>⚡</span>
+        <span class='hero'>PWA Template</span>
       </div>
     `
   }

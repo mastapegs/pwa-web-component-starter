@@ -6,6 +6,7 @@ render(html`
     body {
       margin: 0;
       padding: 0;
+      font: 16px/1.5 Arial, Helvetica, sans-serif;
     }
   </style>
   <web-app></web-app>
