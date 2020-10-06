@@ -10,6 +10,7 @@ class BottomBar extends LitElement {
         bottom: 0;
         height: 4em;
         background: #0288D1;
+        box-shadow: 0 0 .5em .1em black;
       }
       .spacer {
         height: 5em;
