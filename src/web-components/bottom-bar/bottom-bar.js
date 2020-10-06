@@ -31,13 +31,18 @@ class BottomBar extends LitElement {
     ]
   }
 
+  navigate(e, href) {
+    e.preventDefault()
+    window.history.pushState({ data: href }, '', href)
+  }
+
   render() {
     return html`
       <div class="spacer"></div>
       <div class="container">
         <ul>
           ${this.links.map(({ href, linkText }) => html`
-            <li><a href=${href}>${linkText}</a></li>
+          <li><a @click="${(e) => this.navigate(e, href)}" href=${href}>${linkText}</a></li>
           `)}
         </ul>
       </div>
