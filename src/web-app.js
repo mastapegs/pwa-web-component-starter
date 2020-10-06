@@ -1,13 +1,13 @@
 import { LitElement, html } from 'lit-element'
 import './web-components/top-bar/'
-import './web-components/long-list'
 import './web-components/bottom-bar'
+import './web-components/app-router'
 
 class WebApp extends LitElement {
   render() {
     return html`
       <top-bar></top-bar>
-      <!-- <long-list></long-list> -->
+      <app-router></app-router>
       <bottom-bar></bottom-bar>
     `
   }
