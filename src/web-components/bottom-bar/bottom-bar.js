@@ -11,15 +11,26 @@ class BottomBar extends LitElement {
         height: 4em;
         background: #0288D1;
         box-shadow: 0 0 .5em .1em black;
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
+        
         color: white;
         text-shadow: 1px 1px black;
         font-weight: bold;
       }
       .spacer {
         height: 5em;
+      }
+      a {
+        color: inherit;
+        text-decoration: inherit;
+      }
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 100%;
       }
     `
   }
@@ -28,9 +39,11 @@ class BottomBar extends LitElement {
     return html`
       <div class="spacer"></div>
       <div class="container">
-        <div>Home</div>
-        <div>About</div>
-        <div>Contact</div>
+        <ul>
+          <li><a href='/'>Home</a></li>
+          <li><a href='/about'>About</a></li>
+          <li><a href='/contact'>Contact</a></li>
+        </ul>
       </div>
     `
   }
