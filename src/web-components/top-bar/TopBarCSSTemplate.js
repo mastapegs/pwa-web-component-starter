@@ -8,6 +8,8 @@ export default css`
     display: flex;
     align-items: center;
     box-shadow: 0 0 .5em .1em black;
+    position: fixed;
+    width: 100%;
   }
   .icon {
     margin: 0 1em;
@@ -18,5 +20,8 @@ export default css`
     font-size: 1.5em;
     flex: 1;
     text-shadow: 1px 1px black;
+  }
+  .spacer {
+    height: 5em;
   }
 `

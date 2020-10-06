@@ -12,6 +12,7 @@ class TopBar extends LitElement {
         <span role='img' aria-label='lightning' class='icon'>⚡</span>
         <span class='hero'>PWA Template</span>
       </div>
+      <div class="spacer"></div>
     `
   }
 
