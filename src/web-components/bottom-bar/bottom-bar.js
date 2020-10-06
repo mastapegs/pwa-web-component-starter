@@ -11,6 +11,12 @@ class BottomBar extends LitElement {
         height: 4em;
         background: #0288D1;
         box-shadow: 0 0 .5em .1em black;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        color: white;
+        text-shadow: 1px 1px black;
+        font-weight: bold;
       }
       .spacer {
         height: 5em;
@@ -21,7 +27,11 @@ class BottomBar extends LitElement {
   render() {
     return html`
       <div class="spacer"></div>
-      <div class="container"></div>
+      <div class="container">
+        <div>Home</div>
+        <div>About</div>
+        <div>Contact</div>
+      </div>
     `
   }
   
