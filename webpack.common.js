@@ -20,7 +20,10 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(),
-    ...htmlFiles.map(({ filename }) => new HtmlWebpackPlugin({ filename })),
+    ...htmlFiles.map(({ filename }) => new HtmlWebpackPlugin({
+      filename,
+      template: './src/index.html',
+    })),
   ],
   output: {
     filename: '[name].bundle.js',
