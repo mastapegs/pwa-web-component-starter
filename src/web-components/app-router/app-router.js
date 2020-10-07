@@ -1,4 +1,4 @@
-import { LitElement, html } from 'lit-element'
+import { LitElement, html, css } from 'lit-element'
 import '../../pages/Home'
 import '../../pages/About'
 import '../../pages/Contact'
@@ -9,6 +9,21 @@ class AppRouter extends LitElement {
     return {
       view: { type: String },
     }
+  }
+
+  static get styles() {
+    return css`
+      .container {
+        box-sizing: border-box;
+        width: 90%;
+        min-height: 50vh;
+        margin: 0 auto;
+        padding: 0 .7em;
+        background: white;
+        border-radius: 0.5em;
+        box-shadow: 3px 3px 3px 0 hsla(0, 0%, 0%, 0.5)
+      }
+    `
   }
 
   constructor() {
@@ -57,7 +72,9 @@ class AppRouter extends LitElement {
 
   render() {
     return html`
-      ${this.getView()}
+      <div class='container'>
+        ${this.getView()}
+      </div>
     `
   }
 
