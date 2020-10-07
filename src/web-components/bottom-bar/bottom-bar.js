@@ -34,6 +34,7 @@ class BottomBar extends LitElement {
   navigate(e, href) {
     e.preventDefault()
     window.history.pushState({ data: href }, '', href)
+    window.dispatchEvent(new CustomEvent('changeView'))
   }
 
   render() {

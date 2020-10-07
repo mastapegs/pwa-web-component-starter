@@ -14,16 +14,16 @@ class AppRouter extends LitElement {
   constructor() {
     super()
     this.view = ''
+    this.setView = this.setView.bind(this)
   }
 
   connectedCallback() {
     super.connectedCallback()
+    window.addEventListener('changeView', this.setView)
     this.setView()
   }
 
   setView() {
-    console.log(window.location.pathname)
-
     switch (window.location.pathname) {
       case '/':
         this.view = 'Home'
