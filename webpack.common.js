@@ -7,10 +7,10 @@ const htmlFiles = [
     filename: 'index.html',
   },
   {
-    filename: 'about.html',
+    filename: 'about/index.html',
   },
   {
-    filename: 'contact.html',
+    filename: 'contact/index.html',
   },
 ]
 
