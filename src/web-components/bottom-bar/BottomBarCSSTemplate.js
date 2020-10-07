@@ -6,7 +6,7 @@ export default css`
     width: 100%;
     bottom: 0;
     height: 4em;
-    background: #0288D1;
+    background: var(--primary-color);
     box-shadow: 0 0 .5em .1em black;
     
     color: white;

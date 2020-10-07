@@ -2,7 +2,7 @@ import { css } from 'lit-element'
 
 export default css`
   .container {
-    background: #0288D1;
+    background: var(--primary-color);
     color: white;
     height: 4em;
     display: flex;
