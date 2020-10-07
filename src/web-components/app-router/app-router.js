@@ -13,7 +13,33 @@ class AppRouter extends LitElement {
 
   constructor() {
     super()
-    this.view = 'Home'
+    this.view = ''
+  }
+
+  connectedCallback() {
+    super.connectedCallback()
+    this.setView()
+  }
+
+  setView() {
+    console.log(window.location.pathname)
+
+    switch (window.location.pathname) {
+      case '/':
+        this.view = 'Home'
+        break
+      case '/about':
+      case '/about/':
+        this.view = 'About'
+        break
+      case '/contact':
+      case '/contact/':
+        this.view = 'Contact'
+        break
+      default:
+        this.view = ''
+        break
+    }
   }
 
   getView() {
