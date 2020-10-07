@@ -2,6 +2,7 @@ import { LitElement, html, css } from 'lit-element'
 import '../../pages/Home'
 import '../../pages/About'
 import '../../pages/Contact'
+import '../long-list'
 
 class AppRouter extends LitElement {
 
@@ -18,7 +19,7 @@ class AppRouter extends LitElement {
         width: 90%;
         min-height: 50vh;
         margin: 0 auto;
-        padding: 0 .7em;
+        padding: 20px .7em;
         background: white;
         border-radius: 0.5em;
         box-shadow: 3px 3px 3px 0 hsla(0, 0%, 0%, 0.5)
@@ -51,6 +52,10 @@ class AppRouter extends LitElement {
       case '/contact/':
         this.view = 'Contact'
         break
+      case '/list':
+      case '/list/':
+        this.view = 'List'
+        break
       default:
         this.view = ''
         break
@@ -65,6 +70,8 @@ class AppRouter extends LitElement {
         return html`<about-page></about-page>`
       case 'Contact':
         return html`<contact-page></contact-page>`
+        case 'List':
+        return html`<long-list></long-list>`
       default:
         return html``
     }

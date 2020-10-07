@@ -12,6 +12,9 @@ const htmlFiles = [
   {
     filename: 'contact/index.html',
   },
+  {
+    filename: 'list/index.html',
+  },
 ]
 
 module.exports = {

@@ -28,6 +28,10 @@ class BottomBar extends LitElement {
         href: '/contact',
         linkText: 'Contact',
       },
+      {
+        href: '/list',
+        linkText: 'Demo List',
+      },
     ]
   }
 
