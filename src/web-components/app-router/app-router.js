@@ -36,6 +36,7 @@ class AppRouter extends LitElement {
   connectedCallback() {
     super.connectedCallback()
     window.addEventListener('changeView', this.setView)
+    window.addEventListener('popstate', this.setView)
     this.setView()
   }
 
