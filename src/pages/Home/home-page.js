@@ -11,7 +11,7 @@ class HomePage extends LitElement {
 
   constructor() {
     super()
-    this.frameworkSize = 9.5;
+    this.frameworkSize = 11.2;
     this.techList = [
       'Web Components',
       'LitElement',
@@ -31,7 +31,7 @@ class HomePage extends LitElement {
       </ul>
 
       <h2>Current JavaScript footprint</h2>
-      <p>JavaScript size: ${this.frameworkSize}kb</p>
+      <p>Web App transfer size: ${this.frameworkSize}kb</p>
     `
   }
 
