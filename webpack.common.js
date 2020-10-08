@@ -36,7 +36,7 @@ module.exports = {
       orientation: "portrait-primary",
       icons: [
         {
-          src: path.resolve('images/lightning.png'),
+          src: path.resolve('src/images/lightning.png'),
           sizes: [512],
           purpose: 'maskable',
         }
