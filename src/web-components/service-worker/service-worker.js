@@ -1,4 +1,4 @@
-import { LitElement, html } from 'lit-element'
+import { LitElement } from 'lit-element'
 
 class ServiceWorker extends LitElement {
 
@@ -18,8 +18,31 @@ class ServiceWorker extends LitElement {
         if (!registration) return
         console.log(`SW Registered:`)
         console.log(registration)
+
+        this.installPWA()
+
       })
     }
+  }
+
+  installPWA() {
+    var CACHE_NAME = 'pwa-app-v1';
+    var urlsToCache = [
+      '/',
+      '/app.bundle.js',
+      '/about/index.html',
+      '/contact/index.html',
+      '/list/index.html',
+    ];
+    self.addEventListener('install', (event) => {
+      event.waitUntil(
+        caches.open(CACHE_NAME)
+          .then(cache => {
+            console.log('opened cache')
+            return cache.addAll(urlsToCache)
+          })
+      )
+    })
   }
 
 }
