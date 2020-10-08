@@ -25,6 +25,10 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(),
+    ...htmlFiles.map(({ filename }) => new HtmlWebpackPlugin({
+      filename,
+      template: './src/index.html',
+    })),
     new WebpackPwaManifest({
       name: "PWA Web Component Starter",
       short_name: "PWA Starter",
@@ -34,18 +38,15 @@ module.exports = {
       background_color: "#154c69",
       theme_color: "#154c69",
       orientation: "portrait-primary",
+      ios: true,
       icons: [
         {
           src: path.resolve('src/images/lightning.png'),
-          sizes: [512],
+          sizes: [192, 512],
           purpose: 'maskable',
         }
       ],
     }),
-    ...htmlFiles.map(({ filename }) => new HtmlWebpackPlugin({
-      filename,
-      template: './src/index.html',
-    })),
     new WorkboxPlugin.GenerateSW({
       clientsClaim: true,
       skipWaiting: true,
