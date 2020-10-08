@@ -15,7 +15,7 @@ class AppRouter extends LitElement {
 
   constructor() {
     super()
-    this.view = ''
+    this.view = 'Home'
     this.setView = this.setView.bind(this)
   }
 
