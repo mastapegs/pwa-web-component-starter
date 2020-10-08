@@ -11,7 +11,7 @@ class HomePage extends LitElement {
 
   constructor() {
     super()
-    this.frameworkSize = 11.2;
+    this.frameworkSize = 12.0;
     this.techList = [
       'Web Components',
       'LitElement',
