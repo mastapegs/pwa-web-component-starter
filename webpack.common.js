@@ -33,7 +33,14 @@ module.exports = {
       display: "standalone",
       background_color: "#154c69",
       theme_color: "#154c69",
-      orientation: "portrait-primary"
+      orientation: "portrait-primary",
+      icons: [
+        {
+          src: path.resolve('images/lightning.png'),
+          sizes: [512],
+          purpose: 'maskable',
+        }
+      ],
     }),
     ...htmlFiles.map(({ filename }) => new HtmlWebpackPlugin({
       filename,
