@@ -32,7 +32,7 @@ class HomePage extends LitElement {
 
       <h2>Current JavaScript footprint</h2>
       <p>Web App transfer size: ${this.frameworkSize}kb</p>
-      <p>Github repository <a href="https://github.com/mastapegs/pwa-web-component-starter">here</a>.</p>
+      <p><a href="https://github.com/mastapegs/pwa-web-component-starter">Github Repository</a>.</p>
     `
   }
 
