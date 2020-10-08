@@ -1,9 +1,5 @@
 import { LitElement, html } from 'lit-element'
 import CSSTemplate from './AppRouterCSSTemplate'
-import '../../pages/Home'
-import '../../pages/About'
-import '../../pages/Contact'
-import '../long-list'
 
 class AppRouter extends LitElement {
 
@@ -30,21 +26,25 @@ class AppRouter extends LitElement {
     this.setView()
   }
 
-  setView() {
+  async setView() {
     switch (window.location.pathname) {
       case '/':
+        await import('../../pages/Home')
         this.view = 'Home'
         break
       case '/about':
       case '/about/':
+        await import('../../pages/About')
         this.view = 'About'
         break
       case '/contact':
       case '/contact/':
+        await import('../../pages/Contact')
         this.view = 'Contact'
         break
       case '/list':
       case '/list/':
+        await import('../long-list')
         this.view = 'List'
         break
       default:
