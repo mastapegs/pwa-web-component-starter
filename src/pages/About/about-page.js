@@ -5,7 +5,7 @@ class AboutPage extends LitElement {
     return html`
     
       <h1>About me</h1>
-      <p>I'm a person who absolutely loves working with the latest and greatest web technologies. To me, playing with web technologies feels like playing with legos. I can make <em>anything</em>.</p>
+      <p>I'm a person who absolutely loves working with the latest and greatest web technologies. To me, playing with web technologies feels like playing with Legos. I can make <em>anything</em>.</p>
 
       <h2>My prior framework, React</h2>
       <p>I felt like my web programming capabilities truly jumped when I began studying React. Once I started using it, I became exposed to NextJS and GatsbyJS. These technologies too increased my coding capabilities.</p>
