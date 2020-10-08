@@ -1,6 +1,7 @@
 const path = require('path')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const WebpackPwaManifest = require('webpack-pwa-manifest')
 
 const htmlFiles = [
   {
@@ -23,6 +24,16 @@ module.exports = {
   },
   plugins: [
     new CleanWebpackPlugin(),
+    new WebpackPwaManifest({
+      name: "PWA Web Component Starter",
+      short_name: "PWA Starter",
+      description: 'PWA Starter',
+      start_url: "index.html",
+      display: "standalone",
+      background_color: "#154c69",
+      theme_color: "#154c69",
+      orientation: "portrait-primary"
+    }),
     ...htmlFiles.map(({ filename }) => new HtmlWebpackPlugin({
       filename,
       template: './src/index.html',
